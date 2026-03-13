@@ -1,0 +1,43 @@
+# GetDocSlots
+
+> Simple room scheduling for medical offices that rent consulting rooms to independent providers.
+
+## What is GetDocSlots?
+
+GetDocSlots is a done-for-you scheduling system built for medical and wellness offices that rent consulting rooms to independent practitioners (psychologists, therapists, psychiatrists, physical therapists, nutritionists, etc.).
+
+It replaces spreadsheets, WhatsApp groups, and generic scheduling tools with a purpose-built real-time dashboard.
+
+## Key Features
+
+- **Visual weekly calendar**: See all rooms side-by-side, color-coded by provider. Monday–Saturday scheduling with 55-minute slots.
+- **Real-time updates**: Slot availability checked in real-time. No double bookings.
+- **Billing reports**: Automatic per-provider billing based on room usage. Late cancellation tracking. PDF export.
+- **Room management**: Add/edit rooms, set custom hourly rates, block rooms for maintenance.
+- **Role-based access**: Admin sees everything. Front desk manages bookings and billing. Providers see only their own appointments.
+- **Email notifications**: Automated emails for bookings, cancellations, and welcome messages.
+
+## Pricing
+
+- $799 one-time setup fee
+- $350/month flat rate (up to 20 providers)
+- No per-seat pricing
+
+## What's Included
+
+- Custom domain and branding
+- Full onboarding and training
+- Email notifications
+- Ongoing support
+- CRM/ERP integration (standard connections)
+- Continuous updates
+
+## Tech Stack
+
+Built on Next.js, Convex (real-time backend), and Vercel. Enterprise-grade infrastructure with encrypted connections, role-based access control, and isolated databases per client.
+
+## Contact
+
+- Email: hey@lowcode.agency
+- Website: https://getdocslots.com
+- Built by: LowCode Agency (https://lowcode.agency)
