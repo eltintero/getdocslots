@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GetDocSlots — Room Scheduling for Medical Offices</title>
+  <meta name="description" content="Simple, powerful room scheduling for medical offices that rent consulting rooms. No per-seat pricing. Flat monthly rate. Up and running in 48 hours.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ─── Nav ─── -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand">
+        <span class="nav-logo">DocSlots</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features" data-i18n="nav_features">Features</a>
+        <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
+        <a href="#faq" data-i18n="nav_faq">FAQ</a>
+        <a href="#cta" class="nav-cta" data-i18n="nav_cta">Get Started</a>
+        <button class="lang-toggle" aria-label="Switch language">ES</button>
+      </div>
+      <div class="nav-mobile-actions">
+        <button class="lang-toggle lang-toggle-mobile" aria-label="Switch language">ES</button>
+        <button class="nav-toggle" aria-label="Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── Hero ─── -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge" data-i18n="hero_badge">For medical offices that rent rooms</div>
+        <h1 data-i18n="hero_title">Stop losing track of<br>who's in which room.</h1>
+        <p class="hero-sub" data-i18n="hero_sub">
+          GetDocSlots is a simple scheduling system built for offices that rent
+          consulting rooms to independent providers. See every room, every
+          appointment, every invoice — in one real-time dashboard.
+        </p>
+        <div class="hero-actions">
+          <a href="#cta" class="btn btn-primary" data-i18n="hero_btn_demo">Book a Demo</a>
+          <a href="#features" class="btn btn-ghost" data-i18n="hero_btn_how">See How It Works</a>
+        </div>
+        <div class="hero-proof">
+          <span class="hero-proof-item" data-i18n="hero_proof_1">No per-seat pricing</span>
+          <span class="hero-proof-sep">&middot;</span>
+          <span class="hero-proof-item" data-i18n="hero_proof_2">Up to 20 providers included</span>
+          <span class="hero-proof-sep">&middot;</span>
+          <span class="hero-proof-item" data-i18n="hero_proof_3">Live in 48 hours</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-screenshot">
+          <div style="position: relative; width: 100%; height: 0px; overflow: hidden; padding-bottom: min(76.92%, 95vh);"><iframe allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" playsinline="" allow="autoplay; fullscreen; picture-in-picture" src="https://docs.lowcode.agency/embed/recordings/ezGZU9CJAPuoPDqZsa8Z?onlyRecording=1" width="100%" height="100%" style="border: 0px; position: absolute; inset: 0px;"></iframe></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Problem ─── -->
+  <section class="problem">
+    <div class="container">
+      <h2 class="section-label reveal" data-i18n="problem_label">The Problem</h2>
+      <h3 class="section-title reveal" data-i18n="problem_title">Spreadsheets and WhatsApp groups<br>weren't built for this.</h3>
+      <div class="problem-grid">
+        <div class="problem-card reveal reveal-delay-1">
+          <div class="problem-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h4 data-i18n="problem_1_title">Double bookings</h4>
+          <p data-i18n="problem_1_desc">Two providers show up at the same time for the same room. Awkward conversations follow.</p>
+        </div>
+        <div class="problem-card reveal reveal-delay-2">
+          <div class="problem-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="10"/></svg>
+          </div>
+          <h4 data-i18n="problem_2_title">Lost revenue</h4>
+          <p data-i18n="problem_2_desc">Late cancellations go untracked. End-of-month invoicing is guesswork. Money slips through the cracks.</p>
+        </div>
+        <div class="problem-card reveal reveal-delay-3">
+          <div class="problem-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h4 data-i18n="problem_3_title">Constant back-and-forth</h4>
+          <p data-i18n="problem_3_desc">"Is Room 3 free on Thursday?" "What time?" "Actually, never mind." Multiply that by 15 providers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Features ─── -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="section-label reveal" data-i18n="features_label">The Solution</h2>
+      <h3 class="section-title reveal" data-i18n="features_title">One dashboard. Every room.<br>Every appointment. Real-time.</h3>
+
+      <div class="feature-row reveal">
+        <div class="feature-text">
+          <div class="feature-tag" data-i18n="feat1_tag">Scheduling</div>
+          <h4 data-i18n="feat1_title">Visual weekly calendar</h4>
+          <p data-i18n="feat1_desc">See all rooms side-by-side in a clean weekly view. Color-coded by provider. Click any empty slot to book. That's it.</p>
+          <ul class="feature-list">
+            <li data-i18n="feat1_li1">Monday through Saturday scheduling</li>
+            <li data-i18n="feat1_li2">55-minute slots with automatic buffer time</li>
+            <li data-i18n="feat1_li3">Overlap prevention — the system won't let it happen</li>
+            <li data-i18n="feat1_li4">Real-time updates across all devices</li>
+          </ul>
+        </div>
+        <div class="feature-img">
+          <video autoplay loop muted playsinline poster="screenshots/agenda-cropped.png">
+            <source src="screenshots/agenda-demo.webm" type="video/webm">
+            <source src="screenshots/agenda-demo.mp4" type="video/mp4">
+            <img src="screenshots/agenda-cropped.png" alt="Weekly calendar view" loading="lazy">
+          </video>
+        </div>
+      </div>
+
+      <div class="feature-row feature-row-reverse reveal">
+        <div class="feature-text">
+          <div class="feature-tag" data-i18n="feat2_tag">Billing</div>
+          <h4 data-i18n="feat2_title">Know exactly what everyone owes</h4>
+          <p data-i18n="feat2_desc">Automatic billing reports based on room usage. Track late cancellations (charged at full rate). Export to PDF with one click.</p>
+          <ul class="feature-list">
+            <li data-i18n="feat2_li1">Per-provider billing with custom hourly rates</li>
+            <li data-i18n="feat2_li2">Late cancellation tracking (24-hour policy)</li>
+            <li data-i18n="feat2_li3">Invoice status tracking (sent/pending)</li>
+            <li data-i18n="feat2_li4">PDF export for easy sharing</li>
+          </ul>
+        </div>
+        <div class="feature-img">
+          <video autoplay loop muted playsinline poster="screenshots/reportes-cropped.png">
+            <source src="screenshots/reports-demo.webm" type="video/webm">
+            <source src="screenshots/reports-demo.mp4" type="video/mp4">
+            <img src="screenshots/reportes-cropped.png" alt="Billing reports dashboard" loading="lazy">
+          </video>
+        </div>
+      </div>
+
+      <div class="feature-row reveal">
+        <div class="feature-text">
+          <div class="feature-tag" data-i18n="feat3_tag">Management</div>
+          <h4 data-i18n="feat3_title">Your rooms and providers, organized</h4>
+          <p data-i18n="feat3_desc">Add rooms, set rates, onboard providers, block dates for maintenance — all from one place. No IT degree required.</p>
+          <ul class="feature-list">
+            <li data-i18n="feat3_li1">Add/edit rooms with custom hourly rates</li>
+            <li data-i18n="feat3_li2">Block rooms for maintenance or renovation</li>
+            <li data-i18n="feat3_li3">Provider onboarding with welcome emails</li>
+            <li data-i18n="feat3_li4">Role-based access (admin, front desk, provider)</li>
+          </ul>
+        </div>
+        <div class="feature-img">
+          <video autoplay loop muted playsinline poster="screenshots/consultorios-cropped.png">
+            <source src="screenshots/rooms-demo.webm" type="video/webm">
+            <source src="screenshots/rooms-demo.mp4" type="video/mp4">
+            <img src="screenshots/consultorios-cropped.png" alt="Room management" loading="lazy">
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── How It Works ─── -->
+  <section class="how-it-works">
+    <div class="container">
+      <h2 class="section-label reveal" data-i18n="how_label">How It Works</h2>
+      <h3 class="section-title reveal" data-i18n="how_title">Live in 48 hours. Not 48 days.</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h4 data-i18n="step1_title">Tell us about your office</h4>
+          <p data-i18n="step1_desc">How many rooms? How many providers? What hours do you operate? We'll configure everything.</p>
+        </div>
+        <div class="step-arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h4 data-i18n="step2_title">We set it up for you</h4>
+          <p data-i18n="step2_desc">Custom domain, user accounts, room configuration, branding. We handle the technical work — you don't touch code.</p>
+        </div>
+        <div class="step-arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h4 data-i18n="step3_title">Your team starts booking</h4>
+          <p data-i18n="step3_desc">We train your staff, walk through every feature, and stick around for questions. You're not alone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── What's Included ─── -->
+  <section class="included">
+    <div class="container">
+      <h2 class="section-label reveal" data-i18n="incl_label">What's Included</h2>
+      <h3 class="section-title reveal" data-i18n="incl_title">This isn't a self-serve tool.<br>It's a done-for-you system.</h3>
+      <div class="included-grid">
+        <div class="included-item">
+          <div class="included-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <h5 data-i18n="incl1_title">Custom domain & branding</h5>
+            <p data-i18n="incl1_desc">Your own URL. Your logo. Your colors. It feels like yours because it is.</p>
+          </div>
+        </div>
+        <div class="included-item">
+          <div class="included-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div>
+            <h5 data-i18n="incl2_title">Full onboarding & training</h5>
+            <p data-i18n="incl2_desc">We walk your team through every feature. Front desk, providers, and admin — everyone knows how to use it.</p>
+          </div>
+        </div>
+        <div class="included-item">
+          <div class="included-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <h5 data-i18n="incl3_title">Email notifications</h5>
+            <p data-i18n="incl3_desc">Automated emails for new bookings, cancellations, and welcome messages. Your team stays in the loop.</p>
+          </div>
+        </div>
+        <div class="included-item">
+          <div class="included-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div>
+            <h5 data-i18n="incl4_title">Ongoing support</h5>
+            <p data-i18n="incl4_desc">Bug? Question? Feature request? Submit a ticket right from the app. We respond fast.</p>
+          </div>
+        </div>
+        <div class="included-item">
+          <div class="included-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <div>
+            <h5 data-i18n="incl5_title">CRM & ERP connections</h5>
+            <p data-i18n="incl5_desc">Need it connected to your existing systems? We'll integrate it. No extra charge for standard connections.</p>
+          </div>
+        </div>
+        <div class="included-item">
+          <div class="included-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <div>
+            <h5 data-i18n="incl6_title">Continuous updates</h5>
+            <p data-i18n="incl6_desc">New features ship regularly. Your system gets better over time — no extra cost, no migration headaches.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Pricing ─── -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <h2 class="section-label reveal" data-i18n="price_label">Pricing</h2>
+      <h3 class="section-title reveal" data-i18n="price_title">One price. No per-seat surprises.</h3>
+      <p class="section-sub" data-i18n="price_sub">Most scheduling tools charge per user. With 15 providers, that adds up fast.<br>We charge a flat rate. Add providers without watching the bill climb.</p>
+
+      <div class="pricing-card reveal">
+        <div class="pricing-header">
+          <div class="pricing-name" data-i18n="price_name">GetDocSlots</div>
+          <div class="pricing-desc" data-i18n="price_desc">Everything you need to manage your rooms</div>
+        </div>
+        <div class="pricing-body">
+          <div class="pricing-setup">
+            <span class="pricing-amount">$799</span>
+            <span class="pricing-period" data-i18n="price_setup">one-time setup</span>
+          </div>
+          <div class="pricing-divider"></div>
+          <div class="pricing-monthly">
+            <span class="pricing-amount">$350</span>
+            <span class="pricing-period" data-i18n="price_monthly">/month</span>
+          </div>
+          <div class="pricing-includes" data-i18n="price_includes">Up to 20 providers included</div>
+        </div>
+        <ul class="pricing-features">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="price_f1">Unlimited rooms & appointments</span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="price_f2">Custom domain & branding</span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="price_f3">Full onboarding & training</span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="price_f4">Email notifications</span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="price_f5">Billing reports & PDF export</span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="price_f6">CRM/ERP integration</span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="price_f7">Ongoing updates & support</span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="price_f8">AI-powered features (coming soon)</span>
+          </li>
+        </ul>
+        <a href="#cta" class="btn btn-primary btn-full" data-i18n="price_get_started">Get Started</a>
+      </div>
+
+      <div class="pricing-compare">
+        <h4 data-i18n="compare_title">How that compares</h4>
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th data-i18n="compare_h_generic">Generic Tools</th>
+              <th class="compare-highlight" data-i18n="compare_h_ours">GetDocSlots</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="compare_r1">15 providers</td>
+              <td><span data-i18n="compare_r1_generic">$150–$300/mo</span> <span class="compare-note" data-i18n="compare_r1_note_generic">(per-seat)</span></td>
+              <td class="compare-highlight"><span data-i18n="compare_r1_ours">$350/mo</span> <span class="compare-note" data-i18n="compare_r1_note_ours">(flat)</span></td>
+            </tr>
+            <tr>
+              <td data-i18n="compare_r2">Multi-room view</td>
+              <td data-i18n="compare_r2_generic">Not available</td>
+              <td class="compare-highlight" data-i18n="compare_r2_ours">Built-in</td>
+            </tr>
+            <tr>
+              <td data-i18n="compare_r3">Billing reports</td>
+              <td data-i18n="compare_r3_generic">Manual / separate tool</td>
+              <td class="compare-highlight" data-i18n="compare_r3_ours">Included</td>
+            </tr>
+            <tr>
+              <td data-i18n="compare_r4">Setup & training</td>
+              <td data-i18n="compare_r4_generic">Self-serve docs</td>
+              <td class="compare-highlight" data-i18n="compare_r4_ours">Done for you</td>
+            </tr>
+            <tr>
+              <td data-i18n="compare_r5">Customization</td>
+              <td data-i18n="compare_r5_generic">Limited templates</td>
+              <td class="compare-highlight" data-i18n="compare_r5_ours">Fully custom</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FAQ ─── -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <h2 class="section-label" data-i18n="faq_label">FAQ</h2>
+      <h3 class="section-title" data-i18n="faq_title">Common questions</h3>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary data-i18n="faq1_q">What kind of offices is this for?</summary>
+          <p data-i18n="faq1_a">Any medical or wellness office that rents rooms to independent practitioners — psychologists, therapists, psychiatrists, physical therapists, nutritionists, dermatologists. If you have rooms and providers who use them on a schedule, this is for you.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq2_q">Can providers book their own appointments?</summary>
+          <p data-i18n="faq2_a">Yes. Each provider gets their own login and can book, view, and cancel their own appointments. They only see what they need to. Your front desk and admin team see everything.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq3_q">What happens if two people try to book the same slot?</summary>
+          <p data-i18n="faq3_a">The system prevents it. Slot availability is checked in real-time — if someone books a slot while you're looking at it, it updates instantly. No double bookings, ever.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq4_q">Is there a per-seat charge as we add providers?</summary>
+          <p data-i18n="faq4_a">No. The flat monthly rate covers up to 20 providers. Need more? Talk to us — we'll work something out. But you'll never get a surprise bill because you added a new therapist.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq5_q">How long does setup take?</summary>
+          <p data-i18n="faq5_a">Most offices are live within 48 hours. We handle the technical setup — domain, accounts, room configuration, branding. You just tell us what you need.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq6_q">Can I customize the system for my office?</summary>
+          <p data-i18n="faq6_a">Absolutely. That's the point. Need custom operating hours? Special cancellation policies? Integration with your billing software? We build it to fit your workflow, not the other way around.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq7_q">Does it work on phones?</summary>
+          <p data-i18n="faq7_a">Yes. The entire system is responsive — desktop, tablet, and mobile. Providers can check their schedule and book rooms from their phone.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq8_q">What if I need help after setup?</summary>
+          <p data-i18n="faq8_a">Support is included. There's a feedback button built right into the app — click it, describe the issue, and we'll respond. No separate ticketing system to learn.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq9_q">Is my data secure?</summary>
+          <p data-i18n="faq9_a">Yes. The system runs on enterprise-grade infrastructure (Convex + Vercel) with encrypted connections, role-based access control, and no shared databases between clients. Your data is yours.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA ─── -->
+  <section class="cta" id="cta">
+    <div class="container">
+      <h2 class="reveal" data-i18n="cta_title">Ready to stop juggling spreadsheets?</h2>
+      <p data-i18n="cta_sub">Book a 15-minute demo. We'll show you the system, answer your questions, and have you live within the week.</p>
+      <div class="cta-actions">
+        <a href="mailto:hey@lowcode.agency?subject=GetDocSlots%20Demo%20Request" class="btn btn-primary btn-lg" data-i18n="cta_demo">Book a Demo</a>
+        <a href="mailto:hey@lowcode.agency?subject=GetDocSlots%20Question" class="btn btn-ghost btn-lg" data-i18n="cta_question">Ask a Question</a>
+      </div>
+      <p class="cta-note" data-i18n="cta_note">No commitment. No credit card. Just a conversation.</p>
+    </div>
+  </section>
+
+  <!-- ─── Footer ─── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="nav-logo">DocSlots</span>
+        <p data-i18n="footer_tagline">Simple room scheduling for medical offices.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#features" data-i18n="nav_features">Features</a>
+        <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
+        <a href="#faq" data-i18n="nav_faq">FAQ</a>
+        <a href="mailto:hey@lowcode.agency">Contact</a>
+      </div>
+      <div class="footer-copy" data-i18n="footer_copy">
+        &copy; 2026 GetDocSlots. Built by <a href="https://lowcode.agency" target="_blank" rel="noopener">LowCode Agency</a>.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ─── i18n ───
+    const translations = {
+      en: {
+        // Nav
+        nav_features: "Features",
+        nav_pricing: "Pricing",
+        nav_faq: "FAQ",
+        nav_cta: "Get Started",
+        // Hero
+        hero_badge: "For medical offices that rent rooms",
+        hero_title: "Stop losing track of<br>who's in which room.",
+        hero_sub: "GetDocSlots is a simple scheduling system built for offices that rent consulting rooms to independent providers. See every room, every appointment, every invoice — in one real-time dashboard.",
+        hero_btn_demo: "Book a Demo",
+        hero_btn_how: "See How It Works",
+        hero_proof_1: "No per-seat pricing",
+        hero_proof_2: "Up to 20 providers included",
+        hero_proof_3: "Live in 48 hours",
+        // Problem
+        problem_label: "The Problem",
+        problem_title: "Spreadsheets and WhatsApp groups<br>weren't built for this.",
+        problem_1_title: "Double bookings",
+        problem_1_desc: "Two providers show up at the same time for the same room. Awkward conversations follow.",
+        problem_2_title: "Lost revenue",
+        problem_2_desc: "Late cancellations go untracked. End-of-month invoicing is guesswork. Money slips through the cracks.",
+        problem_3_title: "Constant back-and-forth",
+        problem_3_desc: "\"Is Room 3 free on Thursday?\" \"What time?\" \"Actually, never mind.\" Multiply that by 15 providers.",
+        // Features
+        features_label: "The Solution",
+        features_title: "One dashboard. Every room.<br>Every appointment. Real-time.",
+        feat1_tag: "Scheduling",
+        feat1_title: "Visual weekly calendar",
+        feat1_desc: "See all rooms side-by-side in a clean weekly view. Color-coded by provider. Click any empty slot to book. That's it.",
+        feat1_li1: "Monday through Saturday scheduling",
+        feat1_li2: "55-minute slots with automatic buffer time",
+        feat1_li3: "Overlap prevention — the system won't let it happen",
+        feat1_li4: "Real-time updates across all devices",
+        feat2_tag: "Billing",
+        feat2_title: "Know exactly what everyone owes",
+        feat2_desc: "Automatic billing reports based on room usage. Track late cancellations (charged at full rate). Export to PDF with one click.",
+        feat2_li1: "Per-provider billing with custom hourly rates",
+        feat2_li2: "Late cancellation tracking (24-hour policy)",
+        feat2_li3: "Invoice status tracking (sent/pending)",
+        feat2_li4: "PDF export for easy sharing",
+        feat3_tag: "Management",
+        feat3_title: "Your rooms and providers, organized",
+        feat3_desc: "Add rooms, set rates, onboard providers, block dates for maintenance — all from one place. No IT degree required.",
+        feat3_li1: "Add/edit rooms with custom hourly rates",
+        feat3_li2: "Block rooms for maintenance or renovation",
+        feat3_li3: "Provider onboarding with welcome emails",
+        feat3_li4: "Role-based access (admin, front desk, provider)",
+        // How it works
+        how_label: "How It Works",
+        how_title: "Live in 48 hours. Not 48 days.",
+        step1_title: "Tell us about your office",
+        step1_desc: "How many rooms? How many providers? What hours do you operate? We'll configure everything.",
+        step2_title: "We set it up for you",
+        step2_desc: "Custom domain, user accounts, room configuration, branding. We handle the technical work — you don't touch code.",
+        step3_title: "Your team starts booking",
+        step3_desc: "We train your staff, walk through every feature, and stick around for questions. You're not alone.",
+        // Included
+        incl_label: "What's Included",
+        incl_title: "This isn't a self-serve tool.<br>It's a done-for-you system.",
+        incl1_title: "Custom domain & branding",
+        incl1_desc: "Your own URL. Your logo. Your colors. It feels like yours because it is.",
+        incl2_title: "Full onboarding & training",
+        incl2_desc: "We walk your team through every feature. Front desk, providers, and admin — everyone knows how to use it.",
+        incl3_title: "Email notifications",
+        incl3_desc: "Automated emails for new bookings, cancellations, and welcome messages. Your team stays in the loop.",
+        incl4_title: "Ongoing support",
+        incl4_desc: "Bug? Question? Feature request? Submit a ticket right from the app. We respond fast.",
+        incl5_title: "CRM & ERP connections",
+        incl5_desc: "Need it connected to your existing systems? We'll integrate it. No extra charge for standard connections.",
+        incl6_title: "Continuous updates",
+        incl6_desc: "New features ship regularly. Your system gets better over time — no extra cost, no migration headaches.",
+        // Pricing
+        price_label: "Pricing",
+        price_title: "One price. No per-seat surprises.",
+        price_sub: "Most scheduling tools charge per user. With 15 providers, that adds up fast.<br>We charge a flat rate. Add providers without watching the bill climb.",
+        price_name: "GetDocSlots",
+        price_desc: "Everything you need to manage your rooms",
+        price_setup: "one-time setup",
+        price_monthly: "/month",
+        price_includes: "Up to 20 providers included",
+        price_f1: "Unlimited rooms & appointments",
+        price_f2: "Custom domain & branding",
+        price_f3: "Full onboarding & training",
+        price_f4: "Email notifications",
+        price_f5: "Billing reports & PDF export",
+        price_f6: "CRM/ERP integration",
+        price_f7: "Ongoing updates & support",
+        price_f8: "AI-powered features (coming soon)",
+        price_get_started: "Get Started",
+        compare_title: "How that compares",
+        compare_h_generic: "Generic Tools",
+        compare_h_ours: "GetDocSlots",
+        compare_r1: "15 providers",
+        compare_r1_generic: "$150–$300/mo",
+        compare_r1_note_generic: "(per-seat)",
+        compare_r1_ours: "$350/mo",
+        compare_r1_note_ours: "(flat)",
+        compare_r2: "Multi-room view",
+        compare_r2_generic: "Not available",
+        compare_r2_ours: "Built-in",
+        compare_r3: "Billing reports",
+        compare_r3_generic: "Manual / separate tool",
+        compare_r3_ours: "Included",
+        compare_r4: "Setup & training",
+        compare_r4_generic: "Self-serve docs",
+        compare_r4_ours: "Done for you",
+        compare_r5: "Customization",
+        compare_r5_generic: "Limited templates",
+        compare_r5_ours: "Fully custom",
+        // FAQ
+        faq_label: "FAQ",
+        faq_title: "Common questions",
+        faq1_q: "What kind of offices is this for?",
+        faq1_a: "Any medical or wellness office that rents rooms to independent practitioners — psychologists, therapists, psychiatrists, physical therapists, nutritionists, dermatologists. If you have rooms and providers who use them on a schedule, this is for you.",
+        faq2_q: "Can providers book their own appointments?",
+        faq2_a: "Yes. Each provider gets their own login and can book, view, and cancel their own appointments. They only see what they need to. Your front desk and admin team see everything.",
+        faq3_q: "What happens if two people try to book the same slot?",
+        faq3_a: "The system prevents it. Slot availability is checked in real-time — if someone books a slot while you're looking at it, it updates instantly. No double bookings, ever.",
+        faq4_q: "Is there a per-seat charge as we add providers?",
+        faq4_a: "No. The flat monthly rate covers up to 20 providers. Need more? Talk to us — we'll work something out. But you'll never get a surprise bill because you added a new therapist.",
+        faq5_q: "How long does setup take?",
+        faq5_a: "Most offices are live within 48 hours. We handle the technical setup — domain, accounts, room configuration, branding. You just tell us what you need.",
+        faq6_q: "Can I customize the system for my office?",
+        faq6_a: "Absolutely. That's the point. Need custom operating hours? Special cancellation policies? Integration with your billing software? We build it to fit your workflow, not the other way around.",
+        faq7_q: "Does it work on phones?",
+        faq7_a: "Yes. The entire system is responsive — desktop, tablet, and mobile. Providers can check their schedule and book rooms from their phone.",
+        faq8_q: "What if I need help after setup?",
+        faq8_a: "Support is included. There's a feedback button built right into the app — click it, describe the issue, and we'll respond. No separate ticketing system to learn.",
+        faq9_q: "Is my data secure?",
+        faq9_a: "Yes. The system runs on enterprise-grade infrastructure (Convex + Vercel) with encrypted connections, role-based access control, and no shared databases between clients. Your data is yours.",
+        // CTA
+        cta_title: "Ready to stop juggling spreadsheets?",
+        cta_sub: "Book a 15-minute demo. We'll show you the system, answer your questions, and have you live within the week.",
+        cta_demo: "Book a Demo",
+        cta_question: "Ask a Question",
+        cta_note: "No commitment. No credit card. Just a conversation.",
+        // Footer
+        footer_tagline: "Simple room scheduling for medical offices.",
+        footer_copy: '&copy; 2026 GetDocSlots. Built by <a href="https://lowcode.agency" target="_blank" rel="noopener">LowCode Agency</a>.',
+      },
+      es: {
+        nav_features: "Funciones",
+        nav_pricing: "Precios",
+        nav_faq: "FAQ",
+        nav_cta: "Comenzar",
+        hero_badge: "Para consultorios que rentan espacios",
+        hero_title: "Deja de perder el control<br>de quién está en qué consultorio.",
+        hero_sub: "GetDocSlots es un sistema de agendamiento simple para consultorios que rentan espacios a proveedores independientes. Ve cada sala, cada cita, cada factura — en un dashboard en tiempo real.",
+        hero_btn_demo: "Agendar Demo",
+        hero_btn_how: "Cómo Funciona",
+        hero_proof_1: "Sin cobro por usuario",
+        hero_proof_2: "Hasta 20 proveedores incluidos",
+        hero_proof_3: "Listo en 48 horas",
+        problem_label: "El Problema",
+        problem_title: "Las hojas de cálculo y los grupos de WhatsApp<br>no están hechos para esto.",
+        problem_1_title: "Reservas dobles",
+        problem_1_desc: "Dos proveedores llegan al mismo tiempo al mismo consultorio. Conversaciones incómodas.",
+        problem_2_title: "Ingresos perdidos",
+        problem_2_desc: "Las cancelaciones tardías no se rastrean. La facturación de fin de mes es adivinanza. El dinero se escapa.",
+        problem_3_title: "Ida y vuelta constante",
+        problem_3_desc: "\"¿El Consultorio 3 está libre el jueves?\" \"¿A qué hora?\" \"Olvídalo.\" Multiplícalo por 15 proveedores.",
+        features_label: "La Solución",
+        features_title: "Un dashboard. Cada sala.<br>Cada cita. En tiempo real.",
+        feat1_tag: "Agendamiento",
+        feat1_title: "Calendario visual semanal",
+        feat1_desc: "Ve todos los consultorios lado a lado en una vista semanal limpia. Por colores por proveedor. Haz clic en cualquier espacio vacío para reservar. Así de simple.",
+        feat1_li1: "Agendamiento de lunes a sábado",
+        feat1_li2: "Slots de 55 minutos con buffer automático",
+        feat1_li3: "Prevención de empalmes — el sistema no lo permite",
+        feat1_li4: "Actualizaciones en tiempo real en todos los dispositivos",
+        feat2_tag: "Facturación",
+        feat2_title: "Sabe exactamente cuánto debe cada quien",
+        feat2_desc: "Reportes de facturación automáticos basados en uso de sala. Rastrea cancelaciones tardías (cobradas a tarifa completa). Exporta a PDF con un clic.",
+        feat2_li1: "Facturación por proveedor con tarifas personalizadas",
+        feat2_li2: "Rastreo de cancelaciones tardías (política de 24 horas)",
+        feat2_li3: "Seguimiento de estado de facturas (enviada/pendiente)",
+        feat2_li4: "Exportación a PDF para compartir fácilmente",
+        feat3_tag: "Administración",
+        feat3_title: "Tus salas y proveedores, organizados",
+        feat3_desc: "Agrega salas, establece tarifas, registra proveedores, bloquea fechas por mantenimiento — todo desde un solo lugar. Sin necesidad de ser técnico.",
+        feat3_li1: "Agrega/edita salas con tarifas personalizadas",
+        feat3_li2: "Bloquea salas por mantenimiento o renovación",
+        feat3_li3: "Registro de proveedores con emails de bienvenida",
+        feat3_li4: "Acceso por roles (admin, recepción, proveedor)",
+        how_label: "Cómo Funciona",
+        how_title: "Listo en 48 horas. No 48 días.",
+        step1_title: "Cuéntanos de tu consultorio",
+        step1_desc: "¿Cuántas salas? ¿Cuántos proveedores? ¿Qué horarios manejan? Nosotros configuramos todo.",
+        step2_title: "Lo configuramos por ti",
+        step2_desc: "Dominio personalizado, cuentas de usuario, configuración de salas, marca. Nosotros manejamos la parte técnica — tú no tocas código.",
+        step3_title: "Tu equipo empieza a reservar",
+        step3_desc: "Capacitamos a tu equipo, recorremos cada función y nos quedamos para resolver dudas. No estás solo.",
+        incl_label: "Qué Incluye",
+        incl_title: "Esto no es una herramienta de autoservicio.<br>Es un sistema listo para ti.",
+        incl1_title: "Dominio y marca personalizados",
+        incl1_desc: "Tu propia URL. Tu logo. Tus colores. Se siente tuyo porque lo es.",
+        incl2_title: "Onboarding y capacitación completa",
+        incl2_desc: "Llevamos a tu equipo por cada función. Recepción, proveedores y admin — todos saben cómo usarlo.",
+        incl3_title: "Notificaciones por email",
+        incl3_desc: "Emails automáticos para nuevas reservas, cancelaciones y mensajes de bienvenida. Tu equipo siempre informado.",
+        incl4_title: "Soporte continuo",
+        incl4_desc: "¿Un bug? ¿Una pregunta? ¿Una solicitud? Envía un ticket directo desde la app. Respondemos rápido.",
+        incl5_title: "Conexiones CRM y ERP",
+        incl5_desc: "¿Necesitas conectarlo a tus sistemas? Lo integramos. Sin cargo extra para conexiones estándar.",
+        incl6_title: "Actualizaciones continuas",
+        incl6_desc: "Nuevas funciones se lanzan regularmente. Tu sistema mejora con el tiempo — sin costo extra, sin migraciones.",
+        price_label: "Precios",
+        price_title: "Un precio. Sin sorpresas por usuario.",
+        price_sub: "La mayoría de herramientas de agendamiento cobran por usuario. Con 15 proveedores, eso suma rápido.<br>Nosotros cobramos tarifa plana. Agrega proveedores sin ver crecer la cuenta.",
+        price_name: "GetDocSlots",
+        price_desc: "Todo lo que necesitas para administrar tus salas",
+        price_setup: "configuración única",
+        price_monthly: "/mes",
+        price_includes: "Hasta 20 proveedores incluidos",
+        price_f1: "Salas y citas ilimitadas",
+        price_f2: "Dominio y marca personalizados",
+        price_f3: "Onboarding y capacitación completa",
+        price_f4: "Notificaciones por email",
+        price_f5: "Reportes de facturación y exportación PDF",
+        price_f6: "Integración CRM/ERP",
+        price_f7: "Actualizaciones y soporte continuo",
+        price_f8: "Funciones con IA (próximamente)",
+        price_get_started: "Comenzar",
+        compare_title: "Cómo se compara",
+        compare_h_generic: "Herramientas Genéricas",
+        compare_h_ours: "GetDocSlots",
+        compare_r1: "15 proveedores",
+        compare_r1_generic: "$150–$300/mes",
+        compare_r1_note_generic: "(por usuario)",
+        compare_r1_ours: "$350/mes",
+        compare_r1_note_ours: "(plano)",
+        compare_r2: "Vista multi-sala",
+        compare_r2_generic: "No disponible",
+        compare_r2_ours: "Incluido",
+        compare_r3: "Reportes de facturación",
+        compare_r3_generic: "Manual / herramienta aparte",
+        compare_r3_ours: "Incluido",
+        compare_r4: "Setup y capacitación",
+        compare_r4_generic: "Documentación de autoservicio",
+        compare_r4_ours: "Hecho por nosotros",
+        compare_r5: "Personalización",
+        compare_r5_generic: "Plantillas limitadas",
+        compare_r5_ours: "Totalmente personalizado",
+        faq_label: "FAQ",
+        faq_title: "Preguntas frecuentes",
+        faq1_q: "¿Para qué tipo de consultorios es esto?",
+        faq1_a: "Para cualquier consultorio médico o de bienestar que renta espacios a profesionales independientes — psicólogos, terapeutas, psiquiatras, fisioterapeutas, nutriólogos, dermatólogos. Si tienes salas y proveedores que las usan con horario, esto es para ti.",
+        faq2_q: "¿Los proveedores pueden agendar sus propias citas?",
+        faq2_a: "Sí. Cada proveedor tiene su propio acceso y puede reservar, ver y cancelar sus citas. Solo ven lo que necesitan. Tu recepción y admin ven todo.",
+        faq3_q: "¿Qué pasa si dos personas intentan reservar el mismo horario?",
+        faq3_a: "El sistema lo previene. La disponibilidad se verifica en tiempo real — si alguien reserva un horario mientras lo ves, se actualiza al instante. Sin reservas dobles, nunca.",
+        faq4_q: "¿Hay cobro por usuario conforme agregamos proveedores?",
+        faq4_a: "No. La tarifa mensual plana cubre hasta 20 proveedores. ¿Necesitas más? Hablemos — lo resolvemos. Pero nunca recibirás una factura sorpresa por agregar un terapeuta nuevo.",
+        faq5_q: "¿Cuánto tarda el setup?",
+        faq5_a: "La mayoría de consultorios están activos en 48 horas. Nosotros manejamos la configuración técnica — dominio, cuentas, salas, marca. Tú solo nos dices qué necesitas.",
+        faq6_q: "¿Puedo personalizar el sistema para mi consultorio?",
+        faq6_a: "Absolutamente. Ese es el punto. ¿Necesitas horarios especiales? ¿Políticas de cancelación diferentes? ¿Integración con tu software de facturación? Lo construimos para tu flujo de trabajo, no al revés.",
+        faq7_q: "¿Funciona en celulares?",
+        faq7_a: "Sí. Todo el sistema es responsivo — escritorio, tablet y móvil. Los proveedores pueden revisar su agenda y reservar salas desde el celular.",
+        faq8_q: "¿Qué pasa si necesito ayuda después del setup?",
+        faq8_a: "El soporte está incluido. Hay un botón de retroalimentación dentro de la app — haz clic, describe el problema y respondemos. Sin otro sistema de tickets que aprender.",
+        faq9_q: "¿Mis datos están seguros?",
+        faq9_a: "Sí. El sistema corre en infraestructura empresarial (Convex + Vercel) con conexiones encriptadas, control de acceso por roles y sin bases de datos compartidas entre clientes. Tus datos son tuyos.",
+        cta_title: "¿Listo para dejar las hojas de cálculo?",
+        cta_sub: "Agenda una demo de 15 minutos. Te mostramos el sistema, respondemos tus preguntas y estarás en línea en la semana.",
+        cta_demo: "Agendar Demo",
+        cta_question: "Hacer una Pregunta",
+        cta_note: "Sin compromiso. Sin tarjeta de crédito. Solo una conversación.",
+        footer_tagline: "Agendamiento simple para consultorios médicos.",
+        footer_copy: '&copy; 2026 GetDocSlots. Desarrollado por <a href="https://lowcode.agency" target="_blank" rel="noopener">LowCode Agency</a>.',
+      }
+    };
+
+    let currentLang = (navigator.language || '').startsWith('es') ? 'es' : 'en';
+
+    function setLang(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      const t = translations[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) {
+          if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+            el.placeholder = t[key];
+          } else {
+            el.innerHTML = t[key];
+          }
+        }
+      });
+      // Update meta
+      document.title = lang === 'es'
+        ? 'GetDocSlots — Agendamiento de Consultorios Médicos'
+        : 'GetDocSlots — Room Scheduling for Medical Offices';
+      const desc = document.querySelector('meta[name="description"]');
+      if (desc) desc.content = lang === 'es'
+        ? 'Sistema simple y poderoso de agendamiento para consultorios que rentan salas. Sin cobro por usuario. Tarifa mensual plana. Listo en 48 horas.'
+        : 'Simple, powerful room scheduling for medical offices that rent consulting rooms. No per-seat pricing. Flat monthly rate. Up and running in 48 hours.';
+      // Toggle button label
+      document.querySelectorAll('.lang-toggle').forEach(btn => {
+        btn.textContent = lang === 'es' ? 'EN' : 'ES';
+      });
+    }
+
+    // Mobile nav toggle
+    document.querySelector('.nav-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('nav-links-open');
+    });
+
+    // Nav scroll shadow
+    const nav = document.querySelector('.nav');
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          nav.classList.toggle('nav-scrolled', window.scrollY > 10);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          document.querySelector('.nav-links').classList.remove('nav-links-open');
+        }
+      });
+    });
+
+    // Scroll reveal
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Language toggle
+    document.querySelectorAll('.lang-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        setLang(currentLang === 'en' ? 'es' : 'en');
+      });
+    });
+
+    // Init
+    setLang(currentLang);
+  </script>
+
+</body>
+</html>

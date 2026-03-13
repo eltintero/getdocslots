@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+public/
+preview-*.png
+screenshots/BullSharkLab*
+screenshots/login.png
+screenshots/agenda.png
+screenshots/reportes.png
+screenshots/consultorios.png
