@@ -1,7 +1,8 @@
-import { Composition } from "remotion";
+import { Composition, Still } from "remotion";
 import { AgendaDemo } from "./AgendaDemo";
 import { ReportsDemo } from "./ReportsDemo";
 import { RoomsDemo } from "./RoomsDemo";
+import { OgImage } from "./OgImage";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -30,6 +31,7 @@ export const RemotionRoot: React.FC = () => {
         width={1200}
         height={800}
       />
+      <Still id="OgImage" component={OgImage} width={1200} height={630} />
     </>
   );
 };
